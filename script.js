@@ -2,6 +2,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the experience
     initializeExperience();
+    
+    // Add loading progress animation
+    const progressBar = document.querySelector('.loading-progress');
+    if (progressBar) {
+        progressBar.style.animation = 'loadingProgress 3s ease-in-out forwards';
+    }
+    
+    // Preload any images or resources here if needed
+    console.log('🚐 VW Birthday Experience Loaded! 🎉');
+    console.log('Keyboard shortcuts: 1-4 for pages, Space for next action');
+    console.log('Mobile: Swipe left to advance, tap gift box to open');
+    console.log('Easter egg: Click the VW emblem 5 times! 🎁');
 });
 
 function initializeExperience() {
@@ -268,53 +280,7 @@ function playSound(soundType) {
     console.log(`Playing sound: ${soundType}`);
 }
 
-// Add custom CSS animations for special effects
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes busDriveAway {
-        0% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateX(100vw) translateY(-10px);
-        }
-    }
-    
-    @keyframes busHonk {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-    }
-    
-    @keyframes sparkleAnimation {
-        0% {
-            opacity: 1;
-            transform: scale(0) rotate(0deg);
-        }
-        50% {
-            opacity: 1;
-            transform: scale(1.5) rotate(180deg);
-        }
-        100% {
-            opacity: 0;
-            transform: scale(0) rotate(360deg);
-        }
-    }
-    
-    @keyframes heartExplosion {
-        0% {
-            opacity: 1;
-            transform: translate(-50%, -50%) rotate(0deg) translateY(0px);
-        }
-        100% {
-            opacity: 0;
-            transform: translate(-50%, -50%) rotate(720deg) translateY(var(--distance));
-        }
-    }
-`;
-document.head.appendChild(style);
+// CSS animations are now defined in styles.css
 
 // Add keyboard shortcuts for navigation
 document.addEventListener('keydown', function(e) {
@@ -435,17 +401,4 @@ window.addEventListener('resize', function() {
     }
 });
 
-// Initialize any additional features when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    // Add loading progress animation
-    const progressBar = document.querySelector('.loading-progress');
-    if (progressBar) {
-        progressBar.style.animation = 'loadingProgress 3s ease-in-out forwards';
-    }
-    
-    // Preload any images or resources here if needed
-    console.log('🚐 VW Birthday Experience Loaded! 🎉');
-    console.log('Keyboard shortcuts: 1-4 for pages, Space for next action');
-    console.log('Mobile: Swipe left to advance, tap gift box to open');
-    console.log('Easter egg: Click the VW emblem 5 times! 🎁');
-});
+// End of script
