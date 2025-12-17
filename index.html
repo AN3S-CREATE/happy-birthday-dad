@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚐 Happy Birthday Dad! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="vw-logo">🚐</div>
+            <h2>Starting the engine...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Page 1: Welcome -->
+        <section id="page1" class="page active">
+            <div class="sky-background">
+                <div class="clouds cloud1"></div>
+                <div class="clouds cloud2"></div>
+                <div class="clouds cloud3"></div>
+            </div>
+            
+            <div class="road"></div>
+            
+            <div class="vw-bus" id="vw-bus">
+                <div class="bus-body">
+                    <div class="bus-front">
+                        <div class="windshield split-window">
+                            <div class="windshield-left"></div>
+                            <div class="windshield-right"></div>
+                            <div class="windshield-divider"></div>
+                        </div>
+                        <div class="headlights">
+                            <div class="headlight left"></div>
+                            <div class="headlight right"></div>
+                        </div>
+                        <div class="vw-emblem">VW</div>
+                        <div class="front-bumper"></div>
+                    </div>
+                    <div class="bus-side">
+                        <div class="side-windows">
+                            <div class="window window1"></div>
+                            <div class="window window2"></div>
+                            <div class="window window3"></div>
+                        </div>
+                        <div class="door-handle"></div>
+                    </div>
+                </div>
+                <div class="wheels">
+                    <div class="wheel front-wheel">
+                        <div class="tire"></div>
+                        <div class="hubcap"></div>
+                    </div>
+                    <div class="wheel rear-wheel">
+                        <div class="tire"></div>
+                        <div class="hubcap"></div>
+                    </div>
+                </div>
+                <div class="exhaust-smoke"></div>
+            </div>
+
+            <div class="welcome-message">
+                <h1 class="birthday-title">🎉 HAPPY BIRTHDAY DAD! 🎉</h1>
+                <p class="subtitle">Your vintage ride awaits...</p>
+                <button class="start-journey-btn" onclick="startJourney()">
+                    🚐 Start Your Birthday Adventure!
+                </button>
+            </div>
+        </section>
+
+        <!-- Page 2: Journey -->
+        <section id="page2" class="page">
+            <div class="journey-background">
+                <div class="mountains"></div>
+                <div class="trees tree1"></div>
+                <div class="trees tree2"></div>
+                <div class="trees tree3"></div>
+            </div>
+            
+            <div class="journey-content">
+                <h2>🛣️ On the Road to Your Special Day!</h2>
+                <div class="journey-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="365">0</span>
+                        <span class="stat-label">Days of Awesome</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">% Amazing Dad</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="1">0</span>
+                        <span class="stat-label">Special Surprise</span>
+                    </div>
+                </div>
+                <button class="continue-btn" onclick="showSurprise()">
+                    🎁 What's the Surprise?
+                </button>
+            </div>
+        </section>
+
+        <!-- Page 3: Surprise Reveal -->
+        <section id="page3" class="page">
+            <div class="surprise-background">
+                <div class="confetti"></div>
+                <div class="balloons">
+                    <div class="balloon balloon1"></div>
+                    <div class="balloon balloon2"></div>
+                    <div class="balloon balloon3"></div>
+                    <div class="balloon balloon4"></div>
+                </div>
+            </div>
+
+            <div class="surprise-content">
+                <h2>🎊 SURPRISE! 🎊</h2>
+                <div class="gift-box" id="gift-box" onclick="openGiftBox()">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon-v"></div>
+                    <div class="gift-ribbon-h"></div>
+                    <div class="gift-bow"></div>
+                </div>
+                
+                <div class="coupon-container hidden" id="coupon-container">
+                    <div class="coupon">
+                        <div class="coupon-header">
+                            <h3>🚐 BIRTHDAY SPECIAL 🎉</h3>
+                        </div>
+                        <div class="coupon-body">
+                            <div class="coupon-placeholder">
+                                <p>🎁 <strong>SPECIAL COUPON PLACEHOLDER</strong> 🎁</p>
+                                <p>This amazing surprise will be filled in soon!</p>
+                                <p>Get ready for something awesome! 🌟</p>
+                            </div>
+                        </div>
+                        <div class="coupon-footer">
+                            <p>Valid for the most amazing dad ever! ❤️</p>
+                            <div class="coupon-code">CODE: BESTDAD2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="final-btn hidden" id="final-btn" onclick="showFinalMessage()">
+                    💝 One More Thing...
+                </button>
+            </div>
+        </section>
+
+        <!-- Page 4: Final Message -->
+        <section id="page4" class="page">
+            <div class="final-background">
+                <div class="hearts">
+                    <div class="heart heart1">❤️</div>
+                    <div class="heart heart2">💙</div>
+                    <div class="heart heart3">💚</div>
+                    <div class="heart heart4">💛</div>
+                    <div class="heart heart5">💜</div>
+                </div>
+            </div>
+
+            <div class="final-content">
+                <h2>🚐 From Your Volkswagen-Loving Family 💕</h2>
+                <div class="final-message">
+                    <p>Dad, just like your beloved VW buses, you're:</p>
+                    <ul class="dad-qualities">
+                        <li>🔧 <strong>Reliable</strong> - Always there when we need you</li>
+                        <li>🌟 <strong>Classic</strong> - Timeless and never goes out of style</li>
+                        <li>🚐 <strong>Adventurous</strong> - Ready for any journey life brings</li>
+                        <li>❤️ <strong>Full of Character</strong> - Unique and absolutely wonderful</li>
+                        <li>🛠️ <strong>Built to Last</strong> - Strong, dependable, and amazing</li>
+                    </ul>
+                    <p class="final-wish">
+                        Hope your birthday is as awesome as a perfectly restored split-window bus! 🎉
+                    </p>
+                </div>
+                
+                <button class="restart-btn" onclick="restartJourney()">
+                    🔄 Take Another Ride!
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Audio (optional - can be enabled) -->
+    <audio id="engine-sound" loop>
+        <!-- Add VW engine sound if desired -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

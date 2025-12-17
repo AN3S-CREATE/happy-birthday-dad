@@ -1,0 +1,459 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.vw-logo {
+    font-size: 4rem;
+    animation: bounce 1s infinite;
+    margin-bottom: 1rem;
+}
+
+.loading-content h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.loading-bar {
+    width: 300px;
+    height: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.loading-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    border-radius: 4px;
+    animation: loadingProgress 3s ease-in-out;
+}
+
+/* Main Content */
+.main-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Page 1 - Welcome */
+#page1 {
+    background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 70%, #90EE90 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sky-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to bottom, #87CEEB 0%, #B0E0E6 100%);
+}
+
+.clouds {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    animation: floatClouds 20s infinite linear;
+}
+
+.cloud1 {
+    width: 100px;
+    height: 40px;
+    top: 10%;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.cloud2 {
+    width: 150px;
+    height: 60px;
+    top: 20%;
+    left: -150px;
+    animation-delay: -7s;
+}
+
+.cloud3 {
+    width: 80px;
+    height: 30px;
+    top: 15%;
+    left: -80px;
+    animation-delay: -14s;
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, #696969 0%, #2F4F4F 100%);
+    overflow: hidden;
+}
+
+.road::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        to right,
+        #FFD700 0px,
+        #FFD700 30px,
+        transparent 30px,
+        transparent 60px
+    );
+    animation: roadLines 2s infinite linear;
+}
+
+/* VW Bus Styles */
+.vw-bus {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 200px;
+    height: 120px;
+    animation: busIdle 3s ease-in-out infinite;
+}
+
+.bus-body {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(45deg, #DC143C 0%, #B22222 100%);
+    border-radius: 15px 15px 5px 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.bus-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(45deg, #DC143C 0%, #B22222 100%);
+    border-radius: 15px 5px 5px 5px;
+}
+
+/* Split Window - The Key Feature! */
+.windshield {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+    border-radius: 8px;
+    border: 2px solid #C0C0C0;
+}
+
+.split-window .windshield-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+    border-radius: 6px 0 0 6px;
+}
+
+.split-window .windshield-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+    border-radius: 0 6px 6px 0;
+}
+
+.split-window .windshield-divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: #C0C0C0;
+    border-radius: 2px;
+}
+
+.headlights {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headlight {
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #FFFF99 0%, #FFD700 100%);
+    border-radius: 50%;
+    border: 2px solid #C0C0C0;
+    animation: headlightBlink 4s infinite;
+}
+
+.vw-emblem {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #C0C0C0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.wheels {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.wheel {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.tire {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #2F2F2F 0%, #000 100%);
+    border-radius: 50%;
+    border: 3px solid #1C1C1C;
+    animation: wheelSpin 1s infinite linear;
+}
+
+.hubcap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #C0C0C0 0%, #808080 100%);
+    border-radius: 50%;
+    border: 1px solid #696969;
+}
+
+.exhaust-smoke {
+    position: absolute;
+    bottom: 10px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+}
+
+.exhaust-smoke::before {
+    content: '💨';
+    position: absolute;
+    font-size: 20px;
+    animation: smokeFloat 2s infinite ease-in-out;
+}
+
+/* Welcome Message */
+.welcome-message {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.birthday-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.start-journey-btn {
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.start-journey-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Basic Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes loadingProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes floatClouds {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(calc(100vw + 100px)); }
+}
+
+@keyframes roadLines {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(60px); }
+}
+
+@keyframes busIdle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes wheelSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes headlightBlink {
+    0%, 90%, 100% { opacity: 1; }
+    95% { opacity: 0.3; }
+}
+
+@keyframes smokeFloat {
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-10px) scale(1.2); opacity: 0.4; }
+    100% { transform: translateY(-20px) scale(1.5); opacity: 0; }
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+    100% { text-shadow: 2px 2px 20px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.5); }
+}
+
+/* Missing animations that JavaScript references */
+@keyframes busDriveAway {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateX(100vw) translateY(-10px); }
+}
+
+@keyframes busHonk {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes sparkleAnimation {
+    0% { transform: scale(0) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.5) rotate(180deg); opacity: 0.8; }
+    100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heartExplosion {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+    100% { 
+        transform: translate(-50%, -50%) 
+                   translate(calc(cos(var(--angle, 0deg)) * var(--distance, 100px)), 
+                            calc(sin(var(--angle, 0deg)) * var(--distance, 100px)))
+                   rotate(720deg);
+        opacity: 0;
+    }
+}
