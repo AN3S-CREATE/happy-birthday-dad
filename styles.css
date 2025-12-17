@@ -205,18 +205,19 @@ body {
     animation: roadLines 2s infinite linear;
 }
 
-/* VW Bus Styles */
+/* VW Bus Styles - Using Your Exact Code */
+body {
+    padding-top: 100px;
+}
+
 .van {
     width: 600px;
     height: 400px;
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    transform: scale(0.8);
+    position: relative;
 }
 
 .van .body {
-    animation: body 7s infinite linear;
+    -webkit-animation: body 7s infinite linear;
     z-index: 2;
     width: 460px;
     height: 115px;
@@ -235,6 +236,10 @@ body {
     position: absolute;
     top: -24px;
     right: -17px;
+    -webkit-transform: rotate(-55deg);
+    -moz-transform: rotate(-55deg);
+    -ms-transform: rotate(-55deg);
+    -o-transform: rotate(-55deg);
     transform: rotate(-55deg);
     z-index: 4;
     border-radius: 10px;
@@ -249,6 +254,10 @@ body {
     right: -68px;
     top: 59px;
     z-index: 1;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
     transform: rotate(90deg);
     border: 2px solid #585858;
 }
@@ -263,6 +272,10 @@ body {
     right: 29px;
     top: 6px;
     z-index: 1;
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
     transform: rotate(-25deg);
     border: 2px solid #585858;
 }
@@ -278,6 +291,10 @@ body {
     top: 6px;
     border-top-right-radius: 65px;
     border-radius: 0% 86% 0% 0;
+    -webkit-transform: rotate(56deg);
+    -moz-transform: rotate(56deg);
+    -ms-transform: rotate(56deg);
+    -o-transform: rotate(56deg);
     transform: rotate(56deg);
     z-index: 0;
 }
@@ -516,7 +533,7 @@ body {
 }
 
 .van .tire-wrapper.right {
-    animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear;
     z-index: 2;
     width: 69px;
     height: 69px;
@@ -531,6 +548,10 @@ body {
 }
 
 .van .tire-wrapper.right .vw {
+    -webkit-transform: scale(.18);
+    -moz-transform: scale(.18);
+    -ms-transform: scale(.18);
+    -o-transform: scale(.18);
     transform: scale(.18);
     z-index: 2;
     position: absolute;
@@ -562,7 +583,7 @@ body {
 }
 
 .van .tire-wrapper.left {
-    animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear;
     left: 65px;
     bottom: 104px;
     z-index: 2;
@@ -577,6 +598,10 @@ body {
 }
 
 .van .tire-wrapper.left .vw {
+    -webkit-transform: scale(.18);
+    -moz-transform: scale(.18);
+    -ms-transform: scale(.18);
+    -o-transform: scale(.18);
     transform: scale(.18);
     z-index: 2;
     position: absolute;
@@ -643,6 +668,10 @@ body {
     width: 8px;
     height: 58px;
     background: white;
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
     transform: rotate(-25deg);
     top: 13px;
     left: 7px;
@@ -656,6 +685,10 @@ body {
     background: white;
     top: 39px;
     left: 7px;
+    -webkit-transform: rotate(42deg);
+    -moz-transform: rotate(42deg);
+    -ms-transform: rotate(42deg);
+    -o-transform: rotate(42deg);
     transform: rotate(42deg);
 }
 
@@ -674,6 +707,10 @@ body {
     width: 8px;
     height: 58px;
     background: white;
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
     transform: rotate(25deg);
     top: 13px;
     right: 7px;
@@ -687,6 +724,10 @@ body {
     background: white;
     top: 39px;
     right: 7px;
+    -webkit-transform: rotate(-47deg);
+    -moz-transform: rotate(-47deg);
+    -ms-transform: rotate(-47deg);
+    -o-transform: rotate(-47deg);
     transform: rotate(-47deg);
 }
 
@@ -705,6 +746,10 @@ body {
     width: 4px;
     height: 14px;
     background: rgb(255, 255, 255);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 31px;
     right: 32px;
@@ -730,7 +775,7 @@ body {
 }
 
 .van .tree {
-    animation: tree-movement 7s infinite linear;
+    -webkit-animation: tree-movement 7s infinite linear;
     z-index: 1;
     width: 12px;
     height: 230px;
@@ -754,6 +799,10 @@ body {
     height: 80px;
     background: #C27D1E;
     position: absolute;
+    -webkit-transform: rotate(-37deg);
+    -moz-transform: rotate(-37deg);
+    -ms-transform: rotate(-37deg);
+    -o-transform: rotate(-37deg);
     transform: rotate(-37deg);
 }
 
@@ -766,6 +815,10 @@ body {
     bottom: 125px;
     right: -21px;
     background: #975209;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
     transform: rotate(30deg);
 }
 
@@ -774,6 +827,10 @@ body {
     bottom: 77px;
     right: -17px;
     background: #975209;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
     transform: rotate(40deg);
 }
 
