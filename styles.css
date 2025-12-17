@@ -206,165 +206,644 @@ body {
 }
 
 /* VW Bus Styles */
-.vw-bus {
+.van {
+    width: 600px;
+    height: 400px;
     position: absolute;
-    bottom: 15%;
-    left: 10%;
-    width: 280px;
-    height: 160px;
-    animation: busIdle 4s ease-in-out infinite;
-}
-
-.bus-body {
-    position: relative;
-    width: 100%;
-    height: 80%;
-    background: linear-gradient(145deg, #e74c3c 0%, #c0392b 50%, #a93226 100%);
-    border-radius: 8px 8px 4px 4px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
-}
-
-.bus-front {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    height: 100%;
-    background: linear-gradient(145deg, #e74c3c 0%, #c0392b 50%, #a93226 100%);
-    border-radius: 8px 4px 4px 4px;
-}
-
-/* Split Window - The Key Feature! */
-.windshield {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 40%;
-    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
-    border-radius: 8px;
-    border: 2px solid #C0C0C0;
-}
-
-.split-window .windshield-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 48%;
-    height: 100%;
-    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
-    border-radius: 6px 0 0 6px;
-}
-
-.split-window .windshield-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 48%;
-    height: 100%;
-    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
-    border-radius: 0 6px 6px 0;
-}
-
-.split-window .windshield-divider {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 100%;
-    background: #C0C0C0;
-    border-radius: 2px;
-}
-
-.headlights {
-    position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 5%;
-    width: 90%;
-    height: 20%;
-    display: flex;
-    justify-content: space-between;
+    transform: scale(0.8);
 }
 
-.headlight {
-    width: 15px;
-    height: 15px;
-    background: radial-gradient(circle, #FFFF99 0%, #FFD700 100%);
-    border-radius: 50%;
-    border: 2px solid #C0C0C0;
-    animation: headlightBlink 4s infinite;
+.van .body {
+    animation: body 7s infinite linear;
+    z-index: 2;
+    width: 460px;
+    height: 115px;
+    margin-right: 70px;
+    background: #12bdad;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    margin-bottom: -13px;
+    margin-left: -3px;
 }
 
-.vw-emblem {
+.van .body .stearing {
+    height: 4px;
+    width: 23px;
+    background: #4d4d4d;
     position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background: #C0C0C0;
+    top: -24px;
+    right: -17px;
+    transform: rotate(-55deg);
+    z-index: 4;
+    border-radius: 10px;
+}
+
+.van .body .headlight {
+    width: 24px;
+    height: 12px;
+    background: #888888;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8px;
-    font-weight: bold;
-    color: #000;
-    cursor: pointer;
-}
-
-.wheels {
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    right: -68px;
+    top: 59px;
+    z-index: 1;
+    transform: rotate(90deg);
+    border: 2px solid #585858;
 }
 
-.wheel {
-    width: 40px;
-    height: 40px;
+.van .body .headlight::before {
+    content: '';
+    width: 10px;
+    height: 5px;
+    background: #da932a;
+    border-radius: 50%;
+    position: absolute;
+    right: 29px;
+    top: 6px;
+    z-index: 1;
+    transform: rotate(-25deg);
+    border: 2px solid #585858;
+}
+
+/* VW Bus Body Details */
+.van .body::before {
+    content: '';
+    width: 111px;
+    height: 79px;
+    background: #c9c9c9;
+    position: absolute;
+    right: -89px;
+    top: 6px;
+    border-top-right-radius: 65px;
+    border-radius: 0% 86% 0% 0;
+    transform: rotate(56deg);
+    z-index: 0;
+}
+
+.van .body::after {
+    content: '';
+    width: 155px;
+    height: 111px;
+    background: #12bdad;
+    position: absolute;
+    right: -65px;
+    border-top-right-radius: 65px;
+    border-top: 4px solid #454545;
+}
+
+.van .body .top {
+    background: #c9c9c9;
+    border-top: 2px solid #8b8b8b;
+    width: 532px;
+    height: 60px;
+    top: -60px;
+    position: absolute;
+    overflow: hidden;
+    clip-path: polygon(2% 0%, 88% 0%, 96% 100%, 0% 100%);
+}
+
+.van .body .top .line {
+    width: 532px;
+    height: 3px;
+    background: #a9a9a9;
+    position: absolute;
+    bottom: 3px;
+}
+
+.van .body .top .window {
+    width: 60px;
+    height: 48px;
+    border: 2px solid #4d4d4d;
+    border-radius: 5px;
+    background: #82ccd9;
+    position: absolute;
+    top: 2px;
+    left: -26px;
+}
+
+.van .body .top .window.two {
+    left: 49px;
+}
+
+.van .body .top .window.three {
+    left: 125px;
+}
+
+.van .body .top .window.four {
+    left: 208px;
+}
+
+.van .body .top .window.five {
+    left: 289px;
+}
+
+.van .body .top .window.six {
+    left: 368px;
+    width: 96px;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     position: relative;
 }
 
-.tire {
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #2F2F2F 0%, #000 100%);
-    border-radius: 50%;
-    border: 3px solid #1C1C1C;
-    animation: wheelSpin 1s infinite linear;
+.van .body .top .window.six::before {
+    content: '';
+    position: absolute;
+    left: 93px;
+    top: 0px;
+    border-right: 28px solid transparent;
+    border-bottom: 48px solid #82ccd9;
+    z-index: 2;
 }
 
-.hubcap {
+.van .body .top .window.six::after {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 94px;
+    top: -2px;
+    border-right: 30px solid transparent;
+    border-bottom: 52px solid #4d4d4d;
+}
+
+.van .body .roof {
+    width: 447px;
+    height: 22px;
+    background: rgb(216, 215, 220);
+    position: absolute;
+    top: -82px;
+    left: 28px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 178%;
+}
+
+.van .body .roof::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    width: 40px;
+    height: 17px;
+    background: rgb(216, 215, 220);
+    border-top-left-radius: 100%;
+    z-index: 3;
+}
+
+.van .body .roof .hole {
+    width: 57px;
+    height: 10px;
+    background: rgb(70, 70, 70);
+    border-radius: 10px;
+    position: absolute;
+    left: 105px;
+    top: 7px;
+}
+
+.van .body .roof .hole.two {
+    left: 181px;
+    top: 6px;
+}
+
+.van .body .roof .hole.three {
+    left: 261px;
+    top: 6px;
+}
+
+.van .body .roof .hole.four {
+    left: 336px;
+}
+
+.van .body .line-dark {
+    width: 390px;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    background: #454545;
+    z-index: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.van .body .line-bottom {
+    width: 244px;
+    height: 3px;
+    background: #bdbdbd;
+    position: absolute;
+    bottom: 4px;
+    left: 126px;
+}
+
+.van .body .mudguard {
+    width: 90px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border-bottom: 0;
+    z-index: 3;
+    border: 6px solid rgba(128, 128, 128, 0.32);
+}
+
+.van .body .mudguard.left {
+    left: 24px;
+}
+
+.van .body .mudguard.right {
+    right: -13px;
+}
+
+.van .body .red {
     width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, #C0C0C0 0%, #808080 100%);
-    border-radius: 50%;
-    border: 1px solid #696969;
+    height: 115px;
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    background: #12bdad;
+    transform: rotate(9deg);
+    border-radius: 0 93%;
 }
 
-.exhaust-smoke {
+.van .body .bumber-left {
+    width: 24px;
+    height: 15px;
+    background: #b6b6c3;
     position: absolute;
-    bottom: 10px;
-    right: -20px;
+    bottom: -7px;
+    left: -6px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 5px;
+}
+
+.van .body .bumber-right {
+    width: 56px;
+    height: 15px;
+    background: #b6b6c3;
+    position: absolute;
+    bottom: -7px;
+    right: -74px;
+    z-index: 1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 5px;
+}
+
+.van .body .bumber-right::after {
+    content: '';
+    width: 10px;
+    height: 31px;
+    background: #b6b6c3;
+    position: absolute;
+    bottom: 0px;
+    right: -3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+/* VW Tire System */
+.van .tire-wrapper {
+    position: absolute;
+    box-shadow: 0 0 5px #000000;
+}
+
+.van .tire-wrapper.right {
+    animation: spin 1s infinite linear;
+    z-index: 2;
+    width: 69px;
+    height: 69px;
+    background-color: #4e4e4e;
+    border-radius: 50%;
+    position: absolute;
+    right: 101px;
+    bottom: 104px;
+    z-index: 3;
+    border: 8px solid #535353;
+    border-style: dashed;
+}
+
+.van .tire-wrapper.right .vw {
+    transform: scale(.18);
+    z-index: 2;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+
+.van .tire-wrapper.right::before {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #807b7b;
+    top: 7px;
+    left: 7px;
+    border: 6px solid #6b6b6b;
+}
+
+.van .tire-wrapper.right::after {
+    background: radial-gradient(50% 15px, #2b2b2b, #9c9898, #383838);
+    content: '';
+    position: absolute;
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
 }
 
-.exhaust-smoke::before {
-    content: '💨';
+.van .tire-wrapper.left {
+    animation: spin 1s infinite linear;
+    left: 65px;
+    bottom: 104px;
+    z-index: 2;
+    width: 69px;
+    height: 69px;
+    background-color: #4e4e4e;
+    border-radius: 50%;
     position: absolute;
-    font-size: 20px;
-    animation: smokeFloat 2s infinite ease-in-out;
+    z-index: 3;
+    border: 8px solid #535353;
+    border-style: dashed;
+}
+
+.van .tire-wrapper.left .vw {
+    transform: scale(.18);
+    z-index: 2;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+
+.van .tire-wrapper.left::before {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #807b7b;
+    top: 7px;
+    left: 7px;
+    border: 6px solid #6b6b6b;
+}
+
+.van .tire-wrapper.left::after {
+    background: radial-gradient(50% 15px, #2b2b2b, #9c9898, #383838);
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+}
+
+/* VW Emblem */
+.vw {
+    width: 100px;
+    height: 100px;
+    background: #3266bc;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 5px #424242;
+}
+
+.vw .circle-one {
+    width: 84px;
+    height: 84px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    box-shadow: 0 0 5px #424242;
+}
+
+.vw .circle-one .circle-two {
+    width: 68px;
+    height: 68px;
+    background: #3266bc;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.vw .circle-one .circle-two .line1 {
+    position: absolute;
+    width: 8px;
+    height: 58px;
+    background: white;
+    transform: rotate(-25deg);
+    top: 13px;
+    left: 7px;
+}
+
+.vw .circle-one .circle-two .line1::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 23px;
+    background: white;
+    top: 39px;
+    left: 7px;
+    transform: rotate(42deg);
+}
+
+.vw .circle-one .circle-two .line1::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 37px;
+    background: white;
+    top: -3px;
+    left: 19px;
+}
+
+.vw .circle-one .circle-two .line2 {
+    position: absolute;
+    width: 8px;
+    height: 58px;
+    background: white;
+    transform: rotate(25deg);
+    top: 13px;
+    right: 7px;
+}
+
+.vw .circle-one .circle-two .line2::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 23px;
+    background: white;
+    top: 39px;
+    right: 7px;
+    transform: rotate(-47deg);
+}
+
+.vw .circle-one .circle-two .line2::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 37px;
+    background: white;
+    top: -3px;
+    right: 19px;
+}
+
+.vw .circle-one .circle-two .line3 {
+    position: absolute;
+    width: 4px;
+    height: 14px;
+    background: rgb(255, 255, 255);
+    transform: rotate(90deg);
+    top: 31px;
+    right: 32px;
+}
+
+.vw .circle-one .circle-two .line3::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 14px;
+    background: white;
+    top: 1px;
+    right: -10px;
+}
+
+/* Road and Tree */
+.van .road {
+    width: 100vw;
+    height: 15px;
+    position: absolute;
+    bottom: 89px;
+    background-color: #616161;
+}
+
+.van .tree {
+    animation: tree-movement 7s infinite linear;
+    z-index: 1;
+    width: 12px;
+    height: 230px;
+    position: absolute;
+    bottom: 104px;
+    right: 0;
+    background: #C27D1E;
+}
+
+.van .tree::after {
+    content: '';
+    width: 6px;
+    height: 230px;
+    position: absolute;
+    right: 0;
+    background: #975209;
+}
+
+.van .tree .branch {
+    width: 8px;
+    height: 80px;
+    background: #C27D1E;
+    position: absolute;
+    transform: rotate(-37deg);
+}
+
+.van .tree .branch.left {
+    top: 44px;
+    left: -20px;
+}
+
+.van .tree .branch.right {
+    bottom: 125px;
+    right: -21px;
+    background: #975209;
+    transform: rotate(30deg);
+}
+
+.van .tree .branch.bottom {
+    height: 50px;
+    bottom: 77px;
+    right: -17px;
+    background: #975209;
+    transform: rotate(40deg);
+}
+
+.van .tree .leaf {
+    width: 120px;
+    height: 120px;
+    background: #60A240;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    top: -81px;
+    left: -56px;
+    box-shadow: inset -21px -12px #5A953B;
+}
+
+.van .tree .leaf::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 26px;
+    left: 19px;
+    background: #8CBE3B;
+}
+
+.van .tree .leaf.left {
+    top: -23px;
+    left: -100px;
+    width: 90px;
+    height: 90px;
+    background: #8BBD40;
+    box-shadow: inset -9px -8px #72A338;
+    z-index: 4;
+}
+
+.van .tree .leaf.left::after {
+    background: #A0D263;
+    width: 25px;
+    height: 25px;
+}
+
+.van .tree .leaf.right {
+    top: -6px;
+    left: 13px;
+    width: 70px;
+    height: 70px;
+    background: #497830;
+    box-shadow: inset -9px -8px #416C27;
+    z-index: 4;
+}
+
+.van .tree .leaf.right::after {
+    width: 0px;
+    height: 0px;
+}
+
+.van .tree .leaf.plain {
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    background: #497830;
+    top: 82px;
+    left: 19px;
+    z-index: 4;
+}
+
+.van .tree .leaf.plain::after {
+    width: 0px;
+    height: 0px;
 }
 
 /* Welcome Message */
@@ -442,6 +921,31 @@ body {
     100% { transform: translateX(60px); }
 }
 
+/* VW Bus Animations */
+@keyframes tree-movement {
+    0% {
+        transform: translate(400px, 0px);
+    }
+    100% {
+        transform: translate(-100vw, 0px);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes body {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(1deg); }
+    40% { transform: rotate(-1deg); }
+    50% { transform: rotate(0deg); }
+    60% { transform: rotate(-1deg); }
+    90% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
 @keyframes busIdle {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-3px); }
@@ -497,5 +1001,36 @@ body {
                             calc(sin(var(--angle, 0deg)) * var(--distance, 100px)))
                    rotate(720deg);
         opacity: 0;
+    }
+}
+
+/* Utility Classes */
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    /* Additional styling for cover if needed */
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .van {
+        transform: scale(0.6);
+    }
+    
+    .welcome-message {
+        right: 5%;
+        top: 25%;
+    }
+    
+    .birthday-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
     }
 }
