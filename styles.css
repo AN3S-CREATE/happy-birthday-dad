@@ -6,11 +6,10 @@
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+    background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
     min-height: 100vh;
-    color: #ecf0f1;
 }
 
 .hidden {
@@ -24,7 +23,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 50%, #1a1a1a 100%);
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,72 +34,35 @@ body {
 
 .loading-content {
     text-align: center;
-    color: #ecf0f1;
+    color: white;
 }
 
-.vw-emblem-large {
-    margin-bottom: 2rem;
-}
-
-.emblem-circle {
-    width: 120px;
-    height: 120px;
-    border: 4px solid #bdc3c7;
-    border-radius: 50%;
-    position: relative;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
-}
-
-.emblem-v, .emblem-w {
-    position: absolute;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #2c3e50;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.emblem-v {
-    left: 25%;
-}
-
-.emblem-w {
-    right: 25%;
-}
-
-.emblem-line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2px;
-    height: 60%;
-    background: #2c3e50;
+.vw-logo {
+    font-size: 4rem;
+    animation: bounce 1s infinite;
+    margin-bottom: 1rem;
 }
 
 .loading-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-    font-weight: 400;
-    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .loading-bar {
     width: 300px;
-    height: 2px;
-    background: rgba(236,240,241,0.2);
-    border-radius: 1px;
+    height: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
     overflow: hidden;
     margin: 0 auto;
 }
 
 .loading-progress {
     height: 100%;
-    background: linear-gradient(90deg, #bdc3c7, #ecf0f1);
-    border-radius: 1px;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    border-radius: 4px;
     animation: loadingProgress 3s ease-in-out;
 }
 
@@ -210,28 +174,28 @@ body {
     position: absolute;
     bottom: 15%;
     left: 10%;
-    width: 280px;
-    height: 160px;
-    animation: busIdle 4s ease-in-out infinite;
+    width: 200px;
+    height: 120px;
+    animation: busIdle 3s ease-in-out infinite;
 }
 
 .bus-body {
     position: relative;
     width: 100%;
     height: 80%;
-    background: linear-gradient(145deg, #e74c3c 0%, #c0392b 50%, #a93226 100%);
-    border-radius: 8px 8px 4px 4px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    background: linear-gradient(45deg, #DC143C 0%, #B22222 100%);
+    border-radius: 15px 15px 5px 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .bus-front {
     position: absolute;
     top: 0;
     left: 0;
-    width: 35%;
+    width: 30%;
     height: 100%;
-    background: linear-gradient(145deg, #e74c3c 0%, #c0392b 50%, #a93226 100%);
-    border-radius: 8px 4px 4px 4px;
+    background: linear-gradient(45deg, #DC143C 0%, #B22222 100%);
+    border-radius: 15px 5px 5px 5px;
 }
 
 /* Split Window - The Key Feature! */
@@ -378,40 +342,34 @@ body {
 }
 
 .birthday-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #ecf0f1;
+    animation: titleGlow 2s ease-in-out infinite alternate;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-    opacity: 0.8;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 .start-journey-btn {
-    background: transparent;
-    color: #ecf0f1;
-    border: 2px solid #bdc3c7;
-    padding: 12px 40px;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
     cursor: pointer;
-    transition: all 0.4s ease;
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .start-journey-btn:hover {
-    background: #bdc3c7;
-    color: #2c3e50;
-    border-color: #ecf0f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* Basic Animations */
