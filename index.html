@@ -2,23 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Happy Birthday Dad - A Volkswagen Tribute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚐 Happy Birthday Dad! 🎉</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
-            <div class="vw-emblem-large">
-                <div class="emblem-circle">
-                    <div class="emblem-v">V</div>
-                    <div class="emblem-w">W</div>
-                    <div class="emblem-line"></div>
-                </div>
-            </div>
-            <h2>Volkswagen Tribute</h2>
+            <div class="vw-logo">🚐</div>
+            <h2>Starting the engine...</h2>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
             </div>
@@ -29,73 +23,56 @@
     <div id="main-content" class="main-content hidden">
         <!-- Page 1: Welcome -->
         <section id="page1" class="page active">
-            <section class="screen-1 col-xs-12 no-padding display-flex">
-                <div class="van display-flex cover" id="vw-bus">
-                    <div class="body">
-                        <div class="stearing"></div>
-                        <div class="headlight"></div>
-                        <div class="top">
-                            <div class="line"></div>
-                            <div class="window two"></div>
-                            <div class="window three"></div>
-                            <div class="window four"></div>
-                            <div class="window five"></div>
-                            <div class="window six"></div>
+            <div class="sky-background">
+                <div class="clouds cloud1"></div>
+                <div class="clouds cloud2"></div>
+                <div class="clouds cloud3"></div>
+            </div>
+            
+            <div class="road"></div>
+            
+            <div class="vw-bus" id="vw-bus">
+                <div class="bus-body">
+                    <div class="bus-front">
+                        <div class="windshield split-window">
+                            <div class="windshield-left"></div>
+                            <div class="windshield-right"></div>
+                            <div class="windshield-divider"></div>
                         </div>
-                        <div class="roof">
-                            <div class="hole"></div>
-                            <div class="hole two"></div>
-                            <div class="hole three"></div>
-                            <div class="hole four"></div>
+                        <div class="headlights">
+                            <div class="headlight left"></div>
+                            <div class="headlight right"></div>
                         </div>
-                        <div class="line-bottom"></div>
-                        <div class="line-dark"></div>
-                        <div class="mudguard left"></div>
-                        <div class="mudguard right"></div>
-                        <div class="red"></div>
-                        <div class="bumber-left"></div>
-                        <div class="bumber-right"></div>
+                        <div class="vw-emblem">VW</div>
+                        <div class="front-bumper"></div>
                     </div>
-                    <div class="tire-wrapper left">
-                        <div class="vw">
-                            <div class="circle-one">
-                                <div class="circle-two">
-                                    <div class="line1"></div>
-                                    <div class="line2"></div>
-                                    <div class="line3"></div>
-                                </div>
-                            </div>
+                    <div class="bus-side">
+                        <div class="side-windows">
+                            <div class="window window1"></div>
+                            <div class="window window2"></div>
+                            <div class="window window3"></div>
                         </div>
-                    </div>
-                    <div class="tire-wrapper right">
-                        <div class="vw">
-                            <div class="circle-one">
-                                <div class="circle-two">
-                                    <div class="line1"></div>
-                                    <div class="line2"></div>
-                                    <div class="line3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="road"></div>
-                    <div class="tree">
-                        <div class="leaf"></div>
-                        <div class="leaf left"></div>
-                        <div class="leaf right"></div>
-                        <div class="leaf plain"></div>
-                        <div class="branch left"></div>
-                        <div class="branch right"></div>
-                        <div class="branch bottom"></div>
+                        <div class="door-handle"></div>
                     </div>
                 </div>
-            </section>
+                <div class="wheels">
+                    <div class="wheel front-wheel">
+                        <div class="tire"></div>
+                        <div class="hubcap"></div>
+                    </div>
+                    <div class="wheel rear-wheel">
+                        <div class="tire"></div>
+                        <div class="hubcap"></div>
+                    </div>
+                </div>
+                <div class="exhaust-smoke"></div>
+            </div>
 
             <div class="welcome-message">
-                <h1 class="birthday-title">Happy Birthday, Dad</h1>
-                <p class="subtitle">A tribute to your passion for Volkswagen heritage</p>
+                <h1 class="birthday-title">🎉 HAPPY BIRTHDAY DAD! 🎉</h1>
+                <p class="subtitle">Your vintage ride awaits...</p>
                 <button class="start-journey-btn" onclick="startJourney()">
-                    Begin Journey
+                    🚐 Start Your Birthday Adventure!
                 </button>
             </div>
         </section>
@@ -154,35 +131,20 @@
                 </div>
                 
                 <div class="coupon-container hidden" id="coupon-container">
-                    <div class="gift-card-reveal">
-                        <div class="gift-card-header">
-                            <h3>🎁 YOUR BIRTHDAY GIFT! 🎉</h3>
-                            <p class="gift-message">Happy Birthday to my day one! ❤️</p>
+                    <div class="coupon">
+                        <div class="coupon-header">
+                            <h3>🚐 BIRTHDAY SPECIAL 🎉</h3>
                         </div>
-                        <div class="gift-card-wrapper">
-                            <img src="https://github.com/AN3S-CREATE/happy-birthday-dad/blob/codegen-artifacts-store/assets/gift-card.png?raw=true" 
-                                 alt="Birthday Gift Card - R400.00" 
-                                 class="gift-card-image">
+                        <div class="coupon-body">
+                            <div class="coupon-placeholder">
+                                <p>🎁 <strong>SPECIAL COUPON PLACEHOLDER</strong> 🎁</p>
+                                <p>This amazing surprise will be filled in soon!</p>
+                                <p>Get ready for something awesome! 🌟</p>
+                            </div>
                         </div>
-                        <div class="gift-card-details">
-                            <div class="card-info-grid">
-                                <div class="card-detail">
-                                    <span class="detail-label">💳 Card Number:</span>
-                                    <span class="detail-value">537 494 122 693</span>
-                                </div>
-                                <div class="card-detail">
-                                    <span class="detail-label">💰 Value:</span>
-                                    <span class="detail-value">R400.00</span>
-                                </div>
-                                <div class="card-detail">
-                                    <span class="detail-label">📅 Expires:</span>
-                                    <span class="detail-value">17 Dec 2028</span>
-                                </div>
-                            </div>
-                            <div class="personal-message">
-                                <p>"To my day one!" 💙</p>
-                                <p>Enjoy your special gift, Dad! 🚐✨</p>
-                            </div>
+                        <div class="coupon-footer">
+                            <p>Valid for the most amazing dad ever! ❤️</p>
+                            <div class="coupon-code">CODE: BESTDAD2024</div>
                         </div>
                     </div>
                 </div>
@@ -236,3 +198,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
